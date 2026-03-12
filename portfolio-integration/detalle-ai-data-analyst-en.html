@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>AI Data Analyst Platform · Iván de Jesús Díaz Navarro</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = { theme: { extend: { colors: { primary: "#137fec" }, fontFamily: { display: ["Inter","sans-serif"] } } } }
+  </script>
+  <style>
+    .bg-mesh{background-color:#f6f7f8;background-image:radial-gradient(at 0% 0%, hsla(213,100%,88%,1) 0, transparent 50%),radial-gradient(at 50% 0%, hsla(220,100%,96%,1) 0, transparent 50%),radial-gradient(at 100% 0%, hsla(200,100%,90%,1) 0, transparent 50%),radial-gradient(at 0% 100%, hsla(220,100%,96%,1) 0, transparent 50%),radial-gradient(at 80% 100%, hsla(213,100%,88%,1) 0, transparent 50%),radial-gradient(at 0% 50%, hsla(200,100%,93%,1) 0, transparent 50%);}
+    .glass-panel{background:rgba(255,255,255,0.68);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.6);box-shadow:0 10px 40px rgba(31,38,135,0.08);}
+  </style>
+</head>
+<body class="bg-mesh min-h-screen text-slate-800 font-display selection:bg-primary/20">
+<header class="sticky top-0 z-50 w-full border-b border-white/40 bg-white/60 backdrop-blur-xl supports-[backdrop-filter]:bg-white/40">
+  <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <a class="flex items-center gap-2" href="index-en.html" aria-label="Go to home">
+      <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600/10 text-blue-600 backdrop-blur-sm border border-blue-100">
+        <span class="material-symbols-outlined text-xl">analytics</span>
+      </div>
+      <span class="text-lg font-bold tracking-tight text-slate-800">Portafolio de Iván</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors" href="index-en.html">Home</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors" href="about-en.html">About</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors" href="projects-en.html">Projects</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors" href="about-en.html#stack">Skills</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors" href="contact-en.html">Contact</a>
+    </nav>
+    <div class="hidden sm:flex items-center gap-2">
+      <a class="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-700" href="detalle-ai-data-analyst-en.html" aria-current="page">
+        <span class="text-lg">🇺🇸</span>
+        <span>English</span>
+      </a>
+      <a class="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-700" href="detalle-ai-data-analyst.html">
+        <span class="text-lg">🇲🇽</span>
+        <span>Español</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div class="flex items-center gap-2 text-sm text-slate-500 mb-6">
+    <a class="hover:text-primary" href="projects-en.html">Projects</a>
+    <span class="material-symbols-outlined text-xs">chevron_right</span>
+    <span class="text-slate-900 font-semibold">AI Data Analyst Platform</span>
+  </div>
+
+  <div class="glass-panel rounded-2xl p-6 md:p-10 mb-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="space-y-4">
+        <div class="flex gap-2 flex-wrap">
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+            <span class="material-symbols-outlined text-[14px]">smart_toy</span> Applied AI
+          </span>
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+            <span class="material-symbols-outlined text-[14px]">database</span> SQL
+          </span>
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800">
+            <span class="material-symbols-outlined text-[14px]">monitoring</span> Analytics
+          </span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight">
+          AI Data Analyst Platform
+        </h1>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Conversational analytics platform designed as a "ChatGPT for data analysis": it turns natural-language questions into safe SQL, automated analysis, interactive visualizations, insights, and predictive outputs.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a class="inline-flex items-center gap-2 bg-primary hover:bg-blue-600 text-white font-bold py-3 px-5 rounded-xl transition-all shadow-lg shadow-blue-500/30" href="https://github.com/kutusho/ai_data_analyst" target="_blank" rel="noreferrer">
+            <span class="material-symbols-outlined">code</span> View on GitHub
+          </a>
+          <a class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold py-3 px-5 rounded-xl transition-all shadow-sm" href="https://ai-data-analyst-ui.yppe6y.easypanel.host" target="_blank" rel="noreferrer">
+            <span class="material-symbols-outlined">open_in_new</span> Live demo
+          </a>
+          <a class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold py-3 px-5 rounded-xl transition-all shadow-sm" href="projects-en.html">
+            <span class="material-symbols-outlined">arrow_back</span> Back to Projects
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-white/60">
+        <div class="w-full aspect-video bg-cover bg-center" style='background-image: linear-gradient(135deg, #0f172a 0%, #0f766e 35%, #2563eb 68%, #93c5fd 100%);'></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 gap-6 mb-8">
+    <div class="glass-panel rounded-2xl p-6">
+      <h2 class="text-lg font-bold text-slate-800 mb-3">Stack</h2>
+      <div class="flex flex-wrap gap-2 text-sm font-semibold text-slate-700">
+        <span class="px-3 py-1 rounded-full bg-blue-50 border border-blue-100">FastAPI</span>
+        <span class="px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100">Streamlit</span>
+        <span class="px-3 py-1 rounded-full bg-teal-50 border border-teal-100">Python</span>
+        <span class="px-3 py-1 rounded-full bg-cyan-50 border border-cyan-100">SQLAlchemy</span>
+        <span class="px-3 py-1 rounded-full bg-slate-50 border border-slate-100">Plotly</span>
+        <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100">scikit-learn</span>
+        <span class="px-3 py-1 rounded-full bg-violet-50 border border-violet-100">OpenAI API</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="glass-panel rounded-2xl p-6 md:p-8 mb-8 space-y-4">
+    <div class="flex items-center gap-3 text-slate-900">
+      <div class="p-2 bg-blue-50 rounded-lg text-primary">
+        <span class="material-symbols-outlined">flag</span>
+      </div>
+      <h2 class="text-2xl font-bold">Objective</h2>
+    </div>
+    <p class="text-slate-600 leading-relaxed">
+      Build an end-to-end analytics product where users can upload data, ask business questions in natural language, and automatically receive SQL, analysis, charts, recommendations, and predictive outputs.
+    </p>
+  </section>
+
+  <section class="glass-panel rounded-2xl p-6 md:p-8 mb-8">
+    <div class="flex items-center gap-3 text-slate-900 mb-4">
+      <div class="p-2 bg-blue-50 rounded-lg text-primary">
+        <span class="material-symbols-outlined">account_tree</span>
+      </div>
+      <h2 class="text-2xl font-bold">Architecture</h2>
+    </div>
+    <ol class="space-y-3 text-slate-600 leading-relaxed list-decimal list-inside">
+      <li>Streamlit frontend for dataset upload, natural-language questions, charts, and report downloads.</li>
+      <li>FastAPI backend exposing query, dataset registration, insight history, and chart endpoints.</li>
+      <li>Specialized agent system for orchestration, SQL generation, analysis, visualization, and insights.</li>
+      <li>Data layer compatible with CSV, SQLite, and PostgreSQL.</li>
+      <li>Machine learning services for forecasting, clustering, and anomaly detection.</li>
+    </ol>
+  </section>
+
+  <section class="glass-panel rounded-2xl p-6 md:p-8 mb-8">
+    <div class="flex items-center gap-3 text-slate-900 mb-4">
+      <div class="p-2 bg-blue-50 rounded-lg text-primary">
+        <span class="material-symbols-outlined">auto_graph</span>
+      </div>
+      <h2 class="text-2xl font-bold">Key capabilities</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-4 text-slate-600">
+      <div class="rounded-xl border border-slate-200 bg-white/60 p-4">
+        <h3 class="font-bold text-slate-800 mb-2">Natural Language to SQL</h3>
+        <p>Interprets business questions and generates safe read-only SQL queries.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white/60 p-4">
+        <h3 class="font-bold text-slate-800 mb-2">Automated EDA</h3>
+        <p>Builds profiling, descriptive statistics, missing-value reports, correlations, and outlier checks automatically.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white/60 p-4">
+        <h3 class="font-bold text-slate-800 mb-2">Smart visualization</h3>
+        <p>Selects chart types automatically and delivers interactive Plotly outputs.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white/60 p-4">
+        <h3 class="font-bold text-slate-800 mb-2">Prediction and anomalies</h3>
+        <p>Extends analysis with forecasting, clustering, and anomaly detection workflows.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="glass-panel rounded-2xl p-6 md:p-8 mb-8">
+    <div class="flex items-center gap-3 text-slate-900 mb-4">
+      <div class="p-2 bg-blue-50 rounded-lg text-primary">
+        <span class="material-symbols-outlined">image</span>
+      </div>
+      <h2 class="text-2xl font-bold">Screenshots</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white/70 shadow-sm">
+        <img class="w-full h-auto" src="https://raw.githubusercontent.com/kutusho/ai_data_analyst/main/docs/screenshots/frontend-analysis.png" alt="AI Data Analyst Platform frontend screenshot"/>
+        <figcaption class="px-4 py-3 text-sm text-slate-600">Streamlit workspace with natural-language query, analysis, and previewed results.</figcaption>
+      </figure>
+      <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white/70 shadow-sm">
+        <img class="w-full h-auto" src="https://raw.githubusercontent.com/kutusho/ai_data_analyst/main/docs/screenshots/backend-swagger.png" alt="FastAPI Swagger documentation"/>
+        <figcaption class="px-4 py-3 text-sm text-slate-600">Documented API surface in Swagger for queries, datasets, charts, and insights.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="glass-panel rounded-2xl p-6 md:p-8 mb-8">
+    <div class="flex items-center gap-3 text-slate-900 mb-4">
+      <div class="p-2 bg-blue-50 rounded-lg text-primary">
+        <span class="material-symbols-outlined">workspace_premium</span>
+      </div>
+      <h2 class="text-2xl font-bold">Outcome</h2>
+    </div>
+    <p class="text-slate-600 leading-relaxed">
+      This project demonstrates product thinking, backend architecture, LLM integration, visualization, operational security, and VPS deployment. It is a strong flagship piece because it shows the ability to build complete analytics products, not just isolated dashboards.
+    </p>
+  </section>
+</main>
+</body>
+</html>
