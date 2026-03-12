@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+
+artifacts/charts/*.html
+artifacts/reports/*.pdf
+cache/*.db
+cache/*.json
+cache/uploads/*

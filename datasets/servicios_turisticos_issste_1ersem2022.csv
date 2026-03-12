@@ -1,0 +1,5 @@
+periodo,mes,agencia,servicio_hospedaje,ventas_hospedaje,servicios_aereos,ventas_aereos,facturas_air_transport,comisiones_air_transport,servicios_terrestres,ventas_terrestres,servicios_excursiones,ventas_excursiones,servicios_paquetes,ventas_paquetes,servicios_no_propios,ventas_no_propios,facturas_comisiones,comisiones,servicios_turismo_negocios,ventas_turismo_negocios,servicios_parques,ventas_parques
+2022,enero junio,Vallarta,21,94.26927,162,628.547,0,0,0,0,0,0,4968,3333.74944,390,2903.55806,45,372.25161,0,0,43,9.94577
+2022,enero junio,Aapaunam,1,2.60302,103,206.02,0,0,0,0,0,0,256,157.69573,70,844.24147,35,104.0811,0,0,0,0.0
+2022,enero junio,San Fernando,2,3.99151,8,13.118,0,0,0,0,0,0,717,402.11534,48,440.18207,6,63.77432,0,0,32,8.61983
+2022,enero junio,Turismo de Negocios,0,0.0,31,-31500.0,0,0,0,0,0,0,0,0.0,0,0.0,35,-934.81388,0,0,0,0.0

@@ -1,0 +1,25 @@
+year,month,region,product_category,units_sold,revenue
+2024,1,North,Travel Packages,820,164000
+2024,2,North,Travel Packages,860,171500
+2024,3,North,Travel Packages,910,183000
+2024,4,North,Travel Packages,950,191000
+2024,5,North,Travel Packages,990,199500
+2024,6,North,Travel Packages,1040,210000
+2024,7,South,Hotel Bundles,730,149500
+2024,8,South,Hotel Bundles,760,154000
+2024,9,South,Hotel Bundles,790,159500
+2024,10,South,Hotel Bundles,810,162500
+2024,11,South,Hotel Bundles,845,169000
+2024,12,South,Hotel Bundles,910,182000
+2025,1,North,Travel Packages,870,175000
+2025,2,North,Travel Packages,920,184500
+2025,3,North,Travel Packages,970,194500
+2025,4,North,Travel Packages,1010,202500
+2025,5,North,Travel Packages,1065,214000
+2025,6,North,Travel Packages,1120,225500
+2025,7,South,Hotel Bundles,790,160000
+2025,8,South,Hotel Bundles,825,167500
+2025,9,South,Hotel Bundles,860,174000
+2025,10,South,Hotel Bundles,890,180500
+2025,11,South,Hotel Bundles,930,188500
+2025,12,South,Hotel Bundles,990,201000
