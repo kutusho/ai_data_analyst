@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 
 from api.controllers import PlatformController
 from api.routes import router
@@ -30,7 +29,6 @@ def create_app() -> FastAPI:
     app.state.settings = settings
     app.state.controller = PlatformController(settings)
     app.include_router(router)
-    app.mount("/artifacts", StaticFiles(directory=settings.artifacts_dir), name="artifacts")
 
     @app.get("/")
     async def root() -> dict[str, str]:

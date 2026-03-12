@@ -28,6 +28,7 @@ APP_ENV=production
 API_HOST=0.0.0.0
 API_PORT=8000
 API_BASE_URL=https://your-api-domain.example
+API_AUTH_TOKEN=replace-with-a-long-random-token
 OPENAI_API_KEY=
 OPENAI_MODEL=gpt-4o-mini
 DATABASE_URL=sqlite:///cache/analysis.db
@@ -37,6 +38,7 @@ Frontend:
 
 ```env
 API_BASE_URL=https://your-api-domain.example
+API_AUTH_TOKEN=replace-with-the-same-token
 ```
 
 ## Generic VPS Setup
@@ -97,6 +99,7 @@ curl -X POST https://your-api-domain.example/query \
 ## Security Notes
 
 - Keep secrets in environment files or a secret manager, never in the repository
+- Reuse the same `API_AUTH_TOKEN` between the backend and the frontend when the frontend calls the protected API
 - Restrict direct public exposure of internal service ports when a reverse proxy is in front
 - Prefer PostgreSQL over SQLite for heavier production workloads
 - Rotate API keys and SSH credentials regularly

@@ -2,9 +2,13 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Request, UploadFile
+from fastapi.responses import FileResponse
 
 from api.controllers import DatasetUploadResponse, PlatformController, QueryRequest, QueryResponse
+from api.security import require_api_token
 
 router = APIRouter()
 
@@ -25,6 +29,7 @@ async def healthcheck() -> dict[str, str]:
 @router.post("/query", response_model=QueryResponse)
 async def query_data(
     payload: QueryRequest,
+    _: None = Depends(require_api_token),
     controller: PlatformController = Depends(get_controller),
 ) -> QueryResponse:
     """Execute a natural language analytics request."""
@@ -41,6 +46,7 @@ async def upload_dataset(
     dataset_name: str | None = Form(default=None),
     connection_url: str | None = Form(default=None),
     table_name: str | None = Form(default=None),
+    _: None = Depends(require_api_token),
     controller: PlatformController = Depends(get_controller),
 ) -> DatasetUploadResponse:
     """Upload a CSV or register an external database table."""
@@ -59,6 +65,7 @@ async def upload_dataset(
 @router.get("/insights")
 async def get_insights(
     limit: int = 20,
+    _: None = Depends(require_api_token),
     controller: PlatformController = Depends(get_controller),
 ) -> dict:
     """Return recent insights."""
@@ -69,6 +76,7 @@ async def get_insights(
 @router.get("/charts")
 async def get_charts(
     limit: int = 20,
+    _: None = Depends(require_api_token),
     controller: PlatformController = Depends(get_controller),
 ) -> dict:
     """Return recent chart metadata."""
@@ -78,8 +86,31 @@ async def get_charts(
 
 @router.get("/datasets")
 async def list_datasets(
+    _: None = Depends(require_api_token),
     controller: PlatformController = Depends(get_controller),
 ) -> dict:
     """Return available datasets."""
 
     return controller.list_datasets()
+
+
+@router.get("/artifacts/{artifact_path:path}")
+async def get_artifact(
+    artifact_path: str,
+    request: Request,
+    _: None = Depends(require_api_token),
+) -> FileResponse:
+    """Serve chart and report artifacts behind the API token check."""
+
+    artifacts_dir = request.app.state.settings.artifacts_dir.resolve()
+    target_path = (artifacts_dir / artifact_path).resolve()
+
+    try:
+        target_path.relative_to(artifacts_dir)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail="Artifact not found.") from exc
+
+    if not target_path.is_file():
+        raise HTTPException(status_code=404, detail="Artifact not found.")
+
+    return FileResponse(path=Path(target_path))

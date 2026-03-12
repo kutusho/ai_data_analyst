@@ -21,6 +21,7 @@ class AppConfig:
     api_host: str
     api_port: int
     api_base_url: str
+    api_auth_token: str | None
     openai_api_key: str | None
     openai_model: str
     sqlite_path: Path
@@ -39,6 +40,12 @@ class AppConfig:
         """Return whether OpenAI integration is available."""
 
         return bool(self.openai_api_key)
+
+    @property
+    def auth_enabled(self) -> bool:
+        """Return whether API authentication is enabled."""
+
+        return bool(self.api_auth_token)
 
 
 @lru_cache(maxsize=1)
@@ -71,6 +78,7 @@ def get_settings() -> AppConfig:
         api_host=os.getenv("API_HOST", "0.0.0.0"),
         api_port=int(os.getenv("API_PORT", "8000")),
         api_base_url=os.getenv("API_BASE_URL", "http://localhost:8000"),
+        api_auth_token=os.getenv("API_AUTH_TOKEN"),
         openai_api_key=os.getenv("OPENAI_API_KEY"),
         openai_model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
         sqlite_path=sqlite_path,

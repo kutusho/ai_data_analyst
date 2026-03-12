@@ -163,6 +163,7 @@ cp .env.example .env
 
 Optional variables:
 
+- `API_AUTH_TOKEN`
 - `OPENAI_API_KEY`
 - `OPENAI_MODEL`
 - `DATABASE_URL`
@@ -202,6 +203,7 @@ Sample datasets are auto-registered on startup.
 - The platform can be deployed on a VPS with `systemd`, Docker, or another process manager.
 - A reverse proxy such as Nginx or Traefik should terminate HTTPS and route requests to the backend and frontend services.
 - The backend and frontend should be exposed as separate services.
+- Set `API_AUTH_TOKEN` to require a shared token for API access and artifact downloads.
 - OpenAI integration is optional; without `OPENAI_API_KEY`, the platform uses deterministic fallback logic.
 
 Operational details are documented in [docs/VPS_DEPLOYMENT.md](docs/VPS_DEPLOYMENT.md).
